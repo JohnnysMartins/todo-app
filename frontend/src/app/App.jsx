@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import Todo from '../todo/todo';
-import About from '../about/about';
+import Menu from '../template/menu';
+import Routes from './routes';
+
 import './App.css';
 
 class App extends Component {
@@ -16,9 +17,11 @@ class App extends Component {
       //     Vamos ver se realmente funfa
       //   </p>
       // </div>
-      <div className='container'>
-        <Todo />
-        <About />
+      <div>
+        <Menu />
+        <div className='container'>
+          <Routes />
+        </div>
       </div>
     );
   }
