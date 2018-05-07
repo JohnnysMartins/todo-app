@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Router, Route, Redirect , browserHistory} from 'react-router'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Todo from '../todo/todo';
 import About from '../about/about';
