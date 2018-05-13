@@ -11,9 +11,17 @@ export default class Todo extends Component {
     constructor(props) {
         super(props)
         this.state = { description: '', list: [] }
-
+        
         this.handleChange = this.handleChange.bind(this)
         this.handleAdd = this.handleAdd.bind(this)
+        this.setDataList = this.setDataList.bind(this)
+        this.setDataList()
+    }
+
+    setDataList(){
+        axios.get(URL).then(res =>{
+          this.setState({...this.state, list: res.data})
+        })
     }
 
     handleChange(event) {
